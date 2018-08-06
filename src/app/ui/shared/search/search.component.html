@@ -1,0 +1,4 @@
+<mat-form-field floatLabel="never" class="search mat-elevation-z8" [@slideInOut]="showSearch">
+  <input matInput type="text" placeholder="Search..." [(ngModel)]="searchCriteria" name="searchCriteria" (change)="search()" (blur)="showSearch=false" (focus)="showSearch=true" />
+  <mat-icon matSuffix (click)="showSearch = true">search</mat-icon>
+</mat-form-field>

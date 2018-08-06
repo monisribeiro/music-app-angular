@@ -1,0 +1,23 @@
+.mat-table{
+    width: 100%;
+}
+
+.table-container{
+    overflow: auto;
+}
+.mat-icon{
+    cursor: pointer;
+}
+tr.mat-header-row{
+    height: 35px;
+}
+tr.mat-footer-row, tr.mat-row{
+    height: 43px;
+}
+
+.mat-cell{    
+    max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

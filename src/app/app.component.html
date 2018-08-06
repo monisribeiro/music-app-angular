@@ -1,0 +1,26 @@
+
+<mat-toolbar>
+  <span class="title">
+    <mat-icon>library_music</mat-icon>
+    My Music App</span>
+  <button mat-button *ngFor="let link of navLinks"
+    [routerLink]="link.path"
+    routerLinkActive #rla="routerLinkActive"
+    color="{{rla.isActive? 'accent' : ''}}"
+  >
+  {{link.name}}
+  </button>
+  <span class="fill-space"></span>
+  <button mat-icon-button (click)="sidenavOpened = !sidenavOpened"><mat-icon>menu</mat-icon></button>
+</mat-toolbar>
+<div class="spinner" *ngIf="httpActivity">
+  <mat-spinner mode="indeterminate"></mat-spinner>
+</div>
+<mat-sidenav-container class="flex full-height">
+  <mat-sidenav mode="side" position="end" [opened]="sidenavOpened">Sidenav content</mat-sidenav>
+  <mat-sidenav-content class="flex">
+    <div class="outlet-wrapper">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

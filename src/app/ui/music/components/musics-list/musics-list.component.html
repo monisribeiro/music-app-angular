@@ -1,0 +1,41 @@
+<div class="column-flex table-container">
+  <table mat-table [dataSource]="dataSource">
+
+    <!-- Play Icon Column -->
+    <ng-container matColumnDef="play">
+      <th mat-header-cell *matHeaderCellDef> Play </th>
+      <td mat-cell *matCellDef="let element"> <mat-icon>play_circle_filled</mat-icon> </td>
+    </ng-container>
+
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+
+    <!-- Artist Column -->
+    <ng-container matColumnDef="artist">
+      <th mat-header-cell *matHeaderCellDef> Artist </th>
+      <td mat-cell *matCellDef="let element"> {{element.artist.name || element.artist}} </td>
+    </ng-container>
+
+
+    <!-- Listeners Column -->
+    <ng-container matColumnDef="listeners">
+      <th mat-header-cell *matHeaderCellDef> Listeners </th>
+      <td mat-cell *matCellDef="let element"> {{element.listeners}} </td>
+    </ng-container>
+
+    <!-- Duration Column -->
+    <ng-container matColumnDef="duration">
+      <th mat-header-cell *matHeaderCellDef> Duration </th>
+      <td mat-cell *matCellDef="let element"> {{element.duration}} min.</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+    <mat-paginator [pageSize]="15" [length]="musicsSize" (page)="changePage($event)" showFirstLastButtons></mat-paginator>
+
+</div>

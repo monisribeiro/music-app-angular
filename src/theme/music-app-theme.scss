@@ -1,0 +1,28 @@
+@import "~@angular/material/theming";
+
+@include mat-core();
+
+$music-app-primary: mat-palette($mat-deep-purple);
+$music-app-accent: mat-palette($mat-deep-purple, A100);
+$music-app-warn: mat-palette($mat-red);
+$music-app-theme: mat-dark-theme($music-app-primary, $music-app-accent, $music-app-warn);
+
+.music-app-theme {
+    @include angular-material-theme($music-app-theme);
+
+    .mat-form-field-wrapper{
+        padding-bottom: 0px;
+    }
+    .mat-form-field-underline{
+        bottom: 0px;
+    }
+    .mat-form-field-infix{
+        border-top: 0px;
+    }
+    .search .mat-form-field-underline{
+        height: 0px;
+    }
+    .search .mat-form-field-ripple {
+        display: none;
+    }
+}

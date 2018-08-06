@@ -1,0 +1,32 @@
+.mat-card {
+    flex: 1 1 15%;
+    margin: 20px 10px 0px 10px;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+}
+.mat-card-content{
+    margin-bottom: 0px;
+    flex: 1 1 auto;
+}
+
+.flex{
+    flex-wrap: wrap;
+}
+
+.cards-container{
+    overflow: auto;
+}
+
+.mat-paginator{
+    flex: 1 1 auto;
+    margin-top: 10px;
+}
+
+.mat-card-title{
+    margin-bottom: 5px;
+}
+
+.mat-card-content, .mat-card-avatar{
+    background-size: cover;
+}

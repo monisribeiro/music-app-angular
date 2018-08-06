@@ -1,0 +1,31 @@
+.title{
+    padding: 0px 30px 0px 10px;
+}
+
+.mat-icon{    
+    position: relative;
+    top: 6px;
+}
+.mat-button{
+    position: relative;
+    top: 5px;
+}
+
+.fill-space{
+    flex: 1 1 auto;
+}
+
+.spinner{
+    display: flex;
+    flex: 1 1 auto;
+    position: absolute;
+    align-items: center;
+    justify-self: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.15);
+    z-index: 1001;
+}
+.mat-spinner {
+    margin-left: calc(50% - 50px);
+}
