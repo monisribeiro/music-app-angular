@@ -1,19 +1,24 @@
 <div class="cards-container flex">
-  <mat-card *ngFor="let artist of artistsList">
-    <mat-card-header>
-      <div mat-card-avatar class="example-header-image" 
-          [ngStyle]="{'background-image': getUrl(artist.image_small)}"></div>
-      <mat-card-title>{{artist.name}}</mat-card-title>
-      <mat-card-subtitle>artist</mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content [ngStyle]="{'background-image': getUrl(artist.image)}">
-    </mat-card-content>
+  <div class="card" *ngFor="let artist of artistsList">
+    <mat-card >
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image" 
+            [ngStyle]="{'background-image': getUrl(artist.image_small)}"></div>
+        <mat-card-title>{{artist.name}}</mat-card-title>
+        <mat-card-subtitle>artist</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content [ngStyle]="{'background-image': getUrl(artist.image)}">
+      </mat-card-content>
 
-    <mat-card-actions>
-      <button mat-button><mat-icon>music_note</mat-icon>LISTEN</button>
-      <button mat-button><mat-icon>pageview</mat-icon>VIEW DETAILS</button>
-    </mat-card-actions>
-  </mat-card>
-  <mat-paginator [pageSize]="8" [length]="artistsSize" (page)="changePage($event)" showFirstLastButtons></mat-paginator>
+      <mat-card-actions>
+        <button mat-button [routerLink]="['/listen']" [queryParams]="{name: artist.name}"><mat-icon>music_note</mat-icon>LISTEN</button>
+        <button mat-button><mat-icon>pageview</mat-icon>VIEW DETAILS</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  <div class="padding-20 paginator">
+    <mat-paginator [pageSize]="8" [length]="artistsSize" (page)="changePage($event)" showFirstLastButtons></mat-paginator>
+  </div>
+
 
 </div>

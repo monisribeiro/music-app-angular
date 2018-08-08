@@ -1,9 +1,11 @@
 .mat-card {
-    flex: 1 1 15%;
     margin: 20px 10px 0px 10px;
-    height: 280px;
+    height: 29vh;
     display: flex;
     flex-direction: column;
+}
+.card{
+    flex: 1 1 25%;
 }
 .mat-card-content{
     margin-bottom: 0px;
@@ -18,9 +20,8 @@
     overflow: auto;
 }
 
-.mat-paginator{
+.paginator, .mat-paginator{
     flex: 1 1 auto;
-    margin-top: 10px;
 }
 
 .mat-card-title{

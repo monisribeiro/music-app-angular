@@ -7,9 +7,7 @@ import { AppRoutingModule } from './app.routing';
 import { MaterialModule } from './core/material/material.module';
 import { MusicModule } from './ui/music/music.module';
 import { ListenModule } from './ui/listen/listen.module';
-import { DashboardModule } from './ui/dashboard/dashboard.module';
 import { ArtistsModule } from './ui/artists/artists.module';
-import { GenresModule } from './ui/genres/genres.module';
 import { UserAuthenticationService } from 'src/app/core/authentication/user-authentication.service';
 import { HttpClientModule } from '@angular/common/http';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -27,9 +25,7 @@ import { FormsModule } from '@angular/forms';
     MusicModule,
     ListenModule,
     ArtistsModule,
-    DashboardModule,
     ListenModule,
-    GenresModule,
     MaterialModule,
     AppRoutingModule
   ],

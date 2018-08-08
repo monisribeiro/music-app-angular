@@ -13,6 +13,7 @@ import { CdkTableModule } from '@angular/cdk/table';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatCardModule} from '@angular/material/card';
+import {MatDividerModule} from '@angular/material/divider';
 
 @NgModule({
   imports: [
@@ -29,6 +30,7 @@ import {MatCardModule} from '@angular/material/card';
     MatProgressSpinnerModule,
     MatFormFieldModule,
     MatInputModule,
+    MatDividerModule,
     CdkTableModule
   ],
   declarations: [],
@@ -44,6 +46,7 @@ import {MatCardModule} from '@angular/material/card';
     MatProgressSpinnerModule,
     MatFormFieldModule,
     MatInputModule,
+    MatDividerModule,
     CdkTableModule
   ]
 })

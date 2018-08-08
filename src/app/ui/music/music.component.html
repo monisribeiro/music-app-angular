@@ -1,16 +1,15 @@
 <div class="mat-typography column-flex">
   <mat-toolbar color="primary">
-    <span>All Musics</span>
+    <span>{{screenType === 'list'?  'All Musics' : 'Search Results: ' }}</span>
+    <span *ngIf="screenType === 'search'">{{searchCriteria}}</span>
     <span class="fill-space"></span>
     <app-search (onSearch)="search($event)"></app-search>
   </mat-toolbar>
 
   <div class="padding-20 flex">
-    <div class="mat-elevation-z8 flex">
-      <div class="column-flex">
-        <div class="outlet-wrapper">
-          <router-outlet></router-outlet>
-        </div>
+    <div class="column-flex">
+      <div class="outlet-wrapper">
+        <router-outlet></router-outlet>
       </div>
     </div>
   </div>

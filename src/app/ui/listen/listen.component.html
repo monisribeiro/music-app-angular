@@ -1,3 +1,11 @@
-<p>
-  listen works!
-</p>
+<div class="mat-typography column-flex">
+  <mat-toolbar color="primary">
+    <span>Now Playing</span>
+    <span *ngIf="search"> - {{search}}</span>
+    <span class="fill-space"></span>
+  </mat-toolbar>
+
+  <div class="padding-20 flex">
+    <app-player class="column-flex" [video]="video"></app-player>
+  </div>
+</div>

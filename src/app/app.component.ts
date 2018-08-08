@@ -16,14 +16,8 @@ export class AppComponent implements OnInit{
   sidenavOpened = false;
 
   navLinks = [{
-    name: 'Dashboard',
-    path: 'dashboard'
-  }, {
     name: 'Listen',
     path: 'listen'
-  }, {
-    name: 'Genres',
-    path: 'genres'
   }, {
     name: 'Artists',
     path: 'artists'

@@ -29,3 +29,8 @@
 .mat-spinner {
     margin-left: calc(50% - 50px);
 }
+
+p{    
+    font-size: 12px;
+    padding-top: 30px;
+}

@@ -1,6 +1,7 @@
 <div class="mat-typography column-flex">
   <mat-toolbar color="primary">
-    <span>All Artists</span>
+    <span>{{screenType === 'list'?  'All Artists' : 'Search Results: ' }}</span>
+    <span *ngIf="screenType === 'search'">{{searchCriteria}}</span>
     <span class="fill-space"></span>
     <app-search (onSearch)="search($event)"></app-search>
   </mat-toolbar>

@@ -1,0 +1,17 @@
+<div>
+  <div class="flex">
+    <iframe id="player" type="text/html" width="640" height="360"
+    [src]="getUrl()"
+    frameborder="0"></iframe>
+  </div>
+</div>
+<div class="column-flex">
+  <mat-divider></mat-divider>
+  <div class="flex">
+    <h3>Next</h3>
+    <mat-paginator [pageSize]="8" [length]="48" (page)="changePage($event)" hidePageSize="true"></mat-paginator>
+  </div>
+  <div class="column-flex next-cards">
+    
+  </div>
+</div>

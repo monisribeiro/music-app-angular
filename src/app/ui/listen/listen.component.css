@@ -1,0 +1,7 @@
+.mat-toolbar span{
+    padding-left: 10px;
+}
+
+.fill-space{
+    flex: 1 1 auto;
+}

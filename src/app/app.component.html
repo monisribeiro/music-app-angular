@@ -1,5 +1,5 @@
 
-<mat-toolbar>
+<mat-toolbar class="mat-typography">
   <span class="title">
     <mat-icon>library_music</mat-icon>
     My Music App</span>
@@ -11,6 +11,7 @@
   {{link.name}}
   </button>
   <span class="fill-space"></span>
+  <p>Integrated with LastFm and Youtube</p>
   <button mat-icon-button (click)="sidenavOpened = !sidenavOpened"><mat-icon>menu</mat-icon></button>
 </mat-toolbar>
 <div class="spinner" *ngIf="httpActivity">

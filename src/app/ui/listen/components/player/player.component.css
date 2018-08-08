@@ -1,0 +1,9 @@
+.mat-divider{
+    margin: 20px 0px 10px;
+}
+
+.mat-paginator{
+    flex: 1 1 auto;
+    position: relative;
+    top: -15px;
+}

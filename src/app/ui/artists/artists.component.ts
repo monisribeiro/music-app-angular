@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-artists',
@@ -10,10 +10,18 @@ import { Router } from '@angular/router';
   styleUrls: ['./artists.component.css']
 })
 export class ArtistsComponent implements OnInit {
+  searchCriteria: any;
+  screenType: any;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.screenType = this.activatedRoute.firstChild.snapshot.routeConfig.path;
+        this.searchCriteria = this.activatedRoute.firstChild.snapshot.queryParams.search;
+      }
+    });
   }
 
 

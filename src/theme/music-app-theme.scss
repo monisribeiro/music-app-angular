@@ -25,4 +25,7 @@ $music-app-theme: mat-dark-theme($music-app-primary, $music-app-accent, $music-a
     .search .mat-form-field-ripple {
         display: none;
     }
+    .mat-paginator{
+        background-color: transparent;
+    }
 }

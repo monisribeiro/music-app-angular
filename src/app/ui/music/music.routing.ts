@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MusicDetailsComponent } from './components/music-details/music-details.component';
 import { MusicsListComponent } from './components/musics-list/musics-list.component';
 import { MusicListProviderService } from 'src/app/ui/music/shared/providers/music-list-provider.service';
 import { MusicComponent } from 'src/app/ui/music/music.component';
@@ -14,8 +13,7 @@ const appRoutes: Routes = [
     }},
     { path: 'search', component: MusicsListComponent, runGuardsAndResolvers: 'paramsOrQueryParamsChange', resolve: {
         list: SearchMusicsProviderService
-    }},
-    { path: 'details/:id', component: MusicDetailsComponent },
+    }}
   ]}
 ];
 
@@ -35,4 +33,4 @@ const appRoutes: Routes = [
 })
 export class MusicRoutingModule { }
 
-export const routedComponents = [MusicsListComponent, MusicDetailsComponent];
+export const routedComponents = [MusicsListComponent];
